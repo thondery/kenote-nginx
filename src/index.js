@@ -10,7 +10,7 @@ const {
   logQuestion,
   upstreamQuestion
 } = mounts(path.resolve(__dirname, './questions'), 'question')
-const rcpath = path.resolve(process.env.HOME, '.node_nginxrc')
+const rcpath = path.resolve(process.env.HOME || process.env.HOMEPATH, '.node_nginxrc')
 !fs.existsSync(rcpath) && 
   fs.writeFileSync(rcpath, ini.stringify({ conf_path: './vhost' }, { whitespace: true }), { encoding: 'utf-8' })
 const nginxrc = fs.readFileSync(rcpath, { encoding: 'utf-8' })

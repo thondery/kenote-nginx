@@ -76,12 +76,12 @@ const addConf = (dir, opts) => {
     + `    root        ${opts.rootPath};\n`
     + `\n`
     + `${proxy_conf}`
-    + `    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$\n`
+    + `    location ~ .*\\.(gif|jpg|jpeg|png|bmp|swf)$\n`
     + `    {\n`
     + `        expires      30d;\n`
     + `    }\n`
     + `\n`
-    + `    location ~ .*\.(js|css)?$\n`
+    + `    location ~ .*\\.(js|css)?$\n`
     + `    {\n`
     + `        expires      12h;\n`
     + `    }\n`
